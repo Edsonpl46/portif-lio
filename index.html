@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <h1>Bem-vindo ao meu Portfólio</h1>
+            <p>Entre com seu nome para continuar. Caso você não seja Helen, por favor nem tente. 😉</p>
+        </header>
+
+        <form id="login-form">
+            <div class="input-container">
+                <label for="username">Seu nome:</label>
+                <input type="text" id="username" placeholder="Digite seu nome..." required>
+            </div>
+            <div class="input-container">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Senha" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <footer>
+            <p>Feito com ❤️ e um toque de humor!</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim().toLowerCase();
+            
+            // Verifica se o nome contém "Helen"
+            if(username.includes('helen')) {
+                window.location.href = 'main.html?username=Helen'; // Redireciona para o portfólio
+            } else {
+                alert('Já num disse que se você não é Helen, não tente!!!');
+            }
+        });
+    </script>
+</body>
+</html>

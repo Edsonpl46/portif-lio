@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <header class="header">
+            <h1 id="greeting">Bem-vindo ao meu Portfólio de Namoro!</h1>
+            <p>Aqui está um pouco sobre mim, as coisas boas, porque as ruins já contei tudo! 😉</p>
+        </header>
+        
+        <section class="curriculum animated-section">
+            <h2>Currículo </h2>
+            <ul>
+                <li><strong>Nome:</strong> Edson Paulo</li>
+                <li><strong>Idade:</strong> 29 anos ( Já fazendo extra )</li>
+                <li><strong>Habilidades:</strong> Cozinhar ( As vezes ), contar piadas ( Quase sempre ),
+                     maratonar séries ( Se for dublado melhor ainda ), sempre disposto a ouvir,
+                    referências são comigo mesmo, aquele domingo que não quer sair de casa e ficar só vendo desenho, tô dentro demais,
+                    pescar, sair pra fazer compras ai que tô mais dentro ainda.</li>
+                <li><strong>Objetivo:</strong> Partilhar essa vida de, alegrias, tristezas (Que terão porque a vida é foda ), de sorrisos, besteirices na rua, baboseiras faladas, mas acima de tudo respeito e cumplicidade, um relacionamento é feito de renúncias mas que o nossa renúncia nunca seja ver o outro infeliz. </li>
+                <li><strong>Interesses:</strong> A senhorita, a jovem moçoila, vósmecê, tu, viagens sem destino certo
+                                                se eu não deixei claro, então toma, VOCÊ.</li>
+                <li><strong>Qualidades:</strong> Leal, compreensivo, pau pra toda obra, sincero ( Não vamos confundir sinceridade com escrotidão, que é o que a galera faz e diz que é sincera. ), e excelente ouvinte ( mas às vezes falo demais! )</li>
+                <li><strong>Defeitos:</strong> Meio travado, fodido da cabeça, insegurança ( Mas não no caso de não confiança ou que vai perder pra alguém, mas no caso de "porra, será que falei que desagradou, ou fiz algo que foi mal interpretado..." eu sei to fodido.) </li>
+                <li><strong>Favorito para um encontro:</strong> Rapaz, o lugar pouco importa, seja a varanda de casa ou um resort 5 estrelas, se tas do lado, foda-se o resto ( sem demagogia, até porque acho que tá escrito na minha testa, e se não tiver deve ter apagado quando tomei banho, vou reescrever.).</li>
+                <li><strong>Gosto de viajar para:</strong> Qualquer lugar com o menos de pessoas estranhas possiveis! kkkkk</li>
+                <li><strong>Minha playlist:</strong> Do santo ao profano em 1min, vai do metal pesado ao gospel, passando pelo pop dos anos 2000, até um summer eletrohists entra kkkkkk ( Funk carioca ou essas músicas depreciativas, ai da não)</li>
+            </ul>
+        </section>
+
+       
+
+        <section class="hobbies animated-section">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Ler (Quadrinhos é paixão)</li>
+                <li>Tentar dar uma de masterchef ( a chance de dar ruim é altissima )</li>
+                <li>Ver filmes, series (especialmente de animações as vezes a gente só quer desligar)</li>
+                <li>Tocar pra espairecer ( já foi mais, mas hoje ainda curto)</li>
+                <li>Sair pra desopilar, tomar um vento, deitar numa rede, fazer aquela resenha numa pescaria, pqp bom demais.</li>
+            </ul>
+        </section>
+
+        <section class="philosophy animated-section">
+            <h2>Minha Filosofia de Vida</h2>
+            <p>"Ao redor do buraco tudo é beira." - Suassuna, Ariano </p>
+        </section>
+
+        <section class="choose-fate animated-section fade-in">
+            <h2>Depois dessa leitura</h2>
+            <button id="chanceBtn" class="choice-button">Esse bicho merece uma chance?</button>
+            <button id="nopeBtn" class="choice-button">Hoje não Fáro...</button>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>Feito com ❤️ e um pouco de humor.</p>
+    </footer>
+
+    <script>
+        const username = new URLSearchParams(window.location.search).get('username');
+        if (username && username.toLowerCase().includes('helen')) {
+            document.getElementById('greeting').innerText = 'Bem-vinda, Helen! 🎉';
+        }
+
+        document.getElementById('chanceBtn').addEventListener('click', () => {
+            document.body.innerHTML = `
+                <div class="final-message">
+                    <h1>Eu não esperava que chegasse aqui, mas já que chegou...</h1>
+                    <p>Maaaaaaaainha, ela me quer!</p>
+                    <p>😊</p>
+                    <button onclick="window.location.reload()" class="choice-button">Voltar</button>
+                </div>
+            `;
+        });
+
+        document.getElementById('nopeBtn').addEventListener('click', () => {
+            alert("É o que ? Volte e click no outro 😊");
+        });
+    </script>
+</body>
+</html>
